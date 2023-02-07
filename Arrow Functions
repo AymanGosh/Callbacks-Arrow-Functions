@@ -1,0 +1,46 @@
+ const suspenseBuilder1 = {
+    name: "El Mysterio",
+    displayName: ()=>{
+        console.log("You are going to see the name in 3 seconds...")
+        setTimeout(()=>{ //this is the change
+            ﻿console.log(this.name)
+        }, 3000)
+
+    }
+}
+this.name="aa"
+this.age=10
+suspenseBuilder1.displayName()
+/////////////////////////////////
+ const suspenseBuilder2 = {
+    name: "El Mysterio",
+    displayName: function(){
+        console.log("You are going to see the name in 3 seconds...")
+        setTimeout(()=>{ //this is the change
+            ﻿console.log(this.name)
+        }, 3000)
+
+    }
+}
+suspenseBuilder2.displayName()
+/////////////////////////////////
+ const suspenseBuilder3 = {
+    name: "El Mysterio",
+    displayName: function(){
+        console.log("You are going to see the name in 3 seconds...")
+        setTimeout(function(){ //this is the change
+            ﻿console.log(this.name)
+        }, 3000)
+
+    }
+}
+suspenseBuilder3.displayName()
+
+////
+////
+You are going to see the name in 3 seconds...
+You are going to see the name in 3 seconds...
+You are going to see the name in 3 seconds...
+aa
+El Mysterio
+undefined
